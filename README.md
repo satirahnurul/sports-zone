@@ -71,6 +71,9 @@ Berikut langkah-langkah yang saya lakukan dalam mengimplementasi Tugas 3 ini:
     8. Lalu, setting juga path nya di urls supaya web dapat mengakses dan menampilkan data XML dan JSON tersebut.
     9. Di commit dan push ke repository github dan deploy ke repository pws.
 
+6. Apakah ada feedback untuk asdos di tutorial 2 yang sudah kalian kerjakan?
+
+Sejauh ini sudah sangat membantu kak tiap penjelasan di tutorial. Tiap penjelasan juga bisa dipahami dan dibaca-baca lagi untuk memahami materi lebih lanjut. Selain dari saran aku yang sebelumnya, sudah tidak ada lagi kak.
+
 Berikut ini hasil screenshot dari Postman:
     https://drive.google.com/drive/folders/17UfFkrnKoyjxJH6Ukj0iGXMLd2sVQXdD?usp=sharing
-    
