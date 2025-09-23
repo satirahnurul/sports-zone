@@ -1,8 +1,8 @@
-tautan PWS : https://satirah-nurul-sportszone.pbp.cs.ui.ac.id/
+# tautan PWS : https://satirah-nurul-sportszone.pbp.cs.ui.ac.id/
 
-Tugas 2
+## Tugas 2
 
-1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+### 1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 - Aktifkan environment
 - Membuat proyek baru, repositori baru di git, dan mendeploy pws 
 - Lalu membuat aplikasi di direktori yang sama, dan menambahkan applikasi di settings.py
@@ -12,43 +12,43 @@ Tugas 2
 - Terakhir, menkonfigurasikan routing url proyek dengan tujuan untuk melakukan pemetaan ke rute URL pada aplikasi sehingga link URL bisa mengarah ke tampilan aplikasi.
 - Di push ke git dan pws
 
-2. Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html.
+### 2. Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html.
 Request -> urls -> View -> Model -> View -> Template -> Response
 
 Penjelasan :
 saat user search link pattern, request akan dikirim ke django server dan masuk ke urls.py, lalu di urls akan mengarah ke show_main di views.py. Pada views.py, logika request-an di handle dan akan memanggil model, mempersiapkan data (context), dan mengatur template mana yang akan dirender untuk ditampilkan. Pada proses sebelum dan sesudah views juga terjadi konfigurasi pada settings.py yg memproses request. Lalu views ke models, disini dibuat dan disiapkan data yang akan dikirim ke views untuk mempersiapkan context. Lalu views akan ke template untuk merender tampilan yang ada di template HTML. Terakhir, akan dihasilkan HTML final yang akan dikirim ke client-side sebagai response.
 
-3. Jelaskan peran settings.py dalam proyek Django!
+### 3. Jelaskan peran settings.py dalam proyek Django!
 = Pada proyek Django untuk menambahkan aplikasi, diperlukan untuk menambahkan nama aplikasi di berkas settings.py, settings.py ini merupakan file konfigurasi utama yg mengatur fungsi-fungsi pada proyek Django contohnya mengatur aplikasi apa aja yg berjalan atau aktif.
 
-4. Bagaimana cara kerja migrasi database di Django?
+### 4. Bagaimana cara kerja migrasi database di Django?
 = Migrasi model ini bertujuan untuk melacak tiap perubahan pada model proyek Django. Pertama, buat migrasi model dengan perintah makemigrations untuk menbuat berkas migrasi yang berisi perubahan model yg blm diaplikasikan ke basis data. Kedua, aplikasikan migrasi ke basis data lokal dengan perintah migrate.
 
-5. Menurut Anda, dari semua framework yang ada, mengapa framework Django dijadikan permulaan pembelajaran pengembangan perangkat lunak?
+### 5. Menurut Anda, dari semua framework yang ada, mengapa framework Django dijadikan permulaan pembelajaran pengembangan perangkat lunak?
 = Dikarenakan proses pengembangannya yang terbilang lebih mudah karena bahasa pemrogramannya menggunakan python, lalu juga sudah ada fitur yang siap-pakai dalam pengembangannya. Lalu juga dalam hal keamanan, Django memiliki fitur keamanan yang terintegrasi dan terkini. Skala proyek yang dikerjakan juga besar, karena banyak proyek yg bisa dibuat dengan Django.
 
-6. Apakah ada feedback untuk asisten dosen tutorial 1 yang telah kamu kerjakan sebelumnya?
+### 6. Apakah ada feedback untuk asisten dosen tutorial 1 yang telah kamu kerjakan sebelumnya?
 = Kalau boleh memberikan saran, tiap step di tutorial semoga bisa memberikan contoh berupa screenshot dari pengaplikasian caranya
 
-Tugas 3
+## Tugas 3
 
-1. Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?
+### 1. Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?
 
 Data yang ada pada database server biasanya akan dikirimkan dari server atau backend ke frontend pada tampilan platform. Data delivery tersebut diperlukan agar aplikasi pada projek Django dapat bertukar data dengan format yang dapat dipahami mau dari sisi user ataupun mesin.
 
 Terdapat beberapa tujuan utama penggunaan data delivery ini. Pertama, untuk meningkatkan efisiensi operasional. Data delivery mengefisiensi proses pengiriman data dari server ke client-side. Kedua, menjaga akurasi data yang dikirim. Data delivery akan memastikan data yang sedang dikirimkan akurat sesuai apa yang dibuat di server secara akurat. Ketiga, meningkatkan kepuasaan pengguna platform. Data delivery memungkinkan data terkirim dengan cepat dan akurat, sehingga platform dapat menyediakan pelayanan yang baik dan secara real-time.
 
-2. Menurutmu, mana yang lebih baik antara XML dan JSON? Mengapa JSON lebih populer dibandingkan XML?
+#### 2. Menurutmu, mana yang lebih baik antara XML dan JSON? Mengapa JSON lebih populer dibandingkan XML?
 
 Pada saat saya memeriksa data yang ada pada JSON dan XML, penyajian data pada JSON lebih mudah dibaca oleh user karena tampilannya mirip dengan dictionary di python. Sedangkan, XML sedikit lebih kompleks dalam menyajikan datanya. Lalu, dalam sintaksisnya, JSON memerlukan lebih sedikit baris kode sehinggan ukuran filenya lebih kecil daripada XML padahal mereka sama-sama menyajikan data yang sama. Jadi, JSON lebih ringan dan lebih cepat dikirim ke frontend dibanding XML. Lalu, JSON menggunakan standar format untuk pertukaran data di API web modern karena JSON sesuai dengan Java Script dan memudahkan pengembangan web dibanding XML. Penggunaan JSON jauh lebih luas dibanding XML karena JSON dapat digunakan dikebanyakan platform yang memerlukan pertukaran data dengan cepat seperti perangkat IoT dan aplikasi obrolan. Jadi, JSON lebih populer dan lebih baik penggunaannya karena efisiensi dan kecepatannya yang lebih unggul dibanding XML. Namun, XML masih digunakan di beberapa sistem legacy atau jika dibutuhkan fitur tambahan seperti namespace dan skema validasi.
 
-3. Jelaskan fungsi dari method is_valid() pada form Django dan mengapa kita membutuhkan method tersebut?
+#### 3. Jelaskan fungsi dari method is_valid() pada form Django dan mengapa kita membutuhkan method tersebut?
 
 method is_valid() pada form Django tersebut berfungsi untuk memeriksa semua informasi dalam formulir atau serializer. Jadi, method ini akan memvalidasi apakah semua data formulir sesuai dengan aturan yang ditetapkan contohnya seperti tipe data yang ada di models.py, panjang karakter, atau field yang sesuai di forms.py. Jika ada data yang tidak sesuai dengan aturan atau terdapat kesalahan, method ini akan mengembalikan False.
 
 Pada tugas 3 ini, kita membutuhkan method is_valid() untuk memeriksa kebenaran dan keakuratan dari database yang akan masuk ke frontend. Jadi nanti alurnya, data sebelum dikirim sebagai response, data akan divalidasi, setelah benar, baru akan mengirim permintaan POST.
 
-4. Mengapa kita membutuhkan csrf_token saat membuat form di Django? Apa yang dapat terjadi jika kita tidak menambahkan csrf_token pada form Django? Bagaimana hal tersebut dapat dimanfaatkan oleh penyerang?
+### 4. Mengapa kita membutuhkan csrf_token saat membuat form di Django? Apa yang dapat terjadi jika kita tidak menambahkan csrf_token pada form Django? Bagaimana hal tersebut dapat dimanfaatkan oleh penyerang?
 
 csrf_token adalah suatu token unik yang akan otomatis dibuat oleh  Django untuk setiap sesi user. Token ini nantinya akan digunakan untuk memastikan setiap request yang dikirim melalui form atau data delivery ini benar-benar berasal dari pengguna yang sah melalui aplikasi yang sudah kita buat di projek Django, bukan dari sumber yang tidak jelas atau pun website eksternal lainnya.
 
@@ -58,7 +58,7 @@ Mekanisme penggunaan csrf_token ini yaitu pada saat user add products, Django ak
 
 Jadi, csrf_token ini berfungsi sebagai lapisan keamanan ekstra untuk memastikan bahwa hanya request sah dari aplikasi kita yang bisa diproses.
 
-5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step.
+### 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step.
 
 Berikut langkah-langkah yang saya lakukan dalam mengimplementasi Tugas 3 ini:
     1. Pertama saya membuat templates di direktori utama untuk membuat base.html yang menjadi base templates pada app main nantinya.
@@ -71,9 +71,68 @@ Berikut langkah-langkah yang saya lakukan dalam mengimplementasi Tugas 3 ini:
     8. Lalu, setting juga path nya di urls supaya web dapat mengakses dan menampilkan data XML dan JSON tersebut.
     9. Di commit dan push ke repository github dan deploy ke repository pws.
 
-6. Apakah ada feedback untuk asdos di tutorial 2 yang sudah kalian kerjakan?
+### 6. Apakah ada feedback untuk asdos di tutorial 2 yang sudah kalian kerjakan?
 
 Sejauh ini sudah sangat membantu kak tiap penjelasan di tutorial. Tiap penjelasan juga bisa dipahami dan dibaca-baca lagi untuk memahami materi lebih lanjut. Selain dari saran aku yang sebelumnya, sudah tidak ada lagi kak.
 
 Berikut ini hasil screenshot dari Postman:
     https://drive.google.com/drive/folders/17UfFkrnKoyjxJH6Ukj0iGXMLd2sVQXdD?usp=sharing
+
+## Tugas 4
+
+### 1. Apa itu Django AuthenticationForm? Jelaskan juga kelebihan dan kekurangannya.
+
+Django AuthenticationForm merupakan salah satu class dalam Django yang berbentuk (form) built-in yang akan mengkhususkan diri untuk menerima kredensial login seperti usernama dan password user. Form ini bertanggung jawab untuk memvalidasi data tersebut dan mencoba untuk mengautentikasi user dengan sistem autentikasi bawaan Django, yang melibatkan pengecekan akun pengguna, grup, dan izin mereka.
+
+Kelebihan Django AuthenticationForm, yaitu:
+- AuthenticationForm dapat memastikan proses login telah melewati validasi keamanan standar yang  disediakan oleh Dajngo untuk mengurangi resiko lemahnya keamanan sehingga terjadi penyerangan.
+- AuthenticationForm sudah menyediakan fungsionalitas dasar untuk proses login, seperti validasi kredensial dan penanganan kesalahan, yang dapat digunakan secara langsung atau ditambahkan dengan sedikit penyesuaian.
+- AuthenticationForm terintegrasi secara langsung dengan sistem autentikasi Django yang sudah lengkap dan kuat dalam memvalidasi, menangani sesi, pengguna, dan izin tanpa perlu menulis kode tambahan lagi.
+
+Kekurangan Django AuthenticationForm, yaitu:
+- AuthneticaationForm sudah built-in dengan fitur dan kelengkapan yang banyak, sehingga membutuhkan kerangka kerja yang lebih besar dan pengembang baru mungkin akan memerlukan waktu lebih lama untuk memahami form ini lebih dalam terkait teknis dan cara memodifikasinya.
+- Meskipun AuthenticationForm merupakan sistem yang kuat, sistem autentikasi ini cukup generik dan tidak menyediakan banyak fitur spesifik yang umum ditemukan di sistem autentikasi web lain, yang mungkin membutuhkan solusi pihak ketiga untuk kebutuhan yang lebih canggih. 
+
+### 2. Apa perbedaan antara autentikasi dan otorisasi? Bagaimana Django mengimplementasikan kedua konsep tersebut?
+
+Autentikasi merupakan proses memverifikasi akun siapa yang hendak login. Sedangkan, otorisasi merupakan proses memverifikasi suatu akun berhak mengakses kebagian mana saja. 
+
+Contoh yang memperlihatkan perbedaannya yaitu ketika seorang mahasiswa ingin masuk ke akun SIAK-NG nya, proses autentikasi akan memverifikasi yang masuk sebagai mahasiswa, sedangkan proses otorisasi akan memverifikasi mahasiswa tersebut dapat mengakses halaman IRS, Ringkasan, Pembayaran, dll.
+
+Pada Django, ketika user memasukkan data kredensial seperti usernama dan password, data tersebut dikirim ke aplikasi Django. Lalu Django akan memverifikasi kredensial ini menggunakan backend autentikasi yang sudah built-in di dalam Django. Jika data kredensial benar, Django akan membuat sesi untuk user, menyimpan informasi pengguna, dan menyimpannya dalam cookie yang dikirim ke platform. Setelah login yang pertama kali, selanjutnya pada permintaan berikutnya, cookie akan berisi ID sesi yang dikirim ke server. Django akan menggunakan ID ini untuk mengambil data sesi, yang memungkinkan request.user menjadi pengguna yang diautentikasi. Terakhir, Django akan mengaplikasikan otorisasi menggunakan atribut request.user.is_authenticated untuk menentukan apakah pengguna telah masuk dan mengizinkan tindakan tertentu sesuai dengan izin pengguna.
+
+### 3. Apa saja kelebihan dan kekurangan session dan cookies dalam konteks menyimpan state di aplikasi web?
+
+Dalam menyimpan state di aplikasi web, session dan cookie mempunyai kelebihan dan kekurangan sendiri.
+
+a. Cookies
+Kelebihan :
+- Cookies dapat digunakan untuk menyimpan prefensi user seperti contohnya kapan terakhir kali user login seperti yang diaplikasikan pada tugas 4 ini.
+- Cookies disimpan di client-side atau browser sehingga data tidak memberatkan server karena semua informasi tersimpan di perangkat user. Pada server-side, cookies hanya dibaca saat ada request.
+- Cookies mudah diakses baik dari sisi client maupun server karena cookies bisa dibaca melalui JavaScript di browser maupun dikirim otomatis ke server saat request.
+Kekurangan:
+- Cookies tidak dapat digunakan untuk menyimpand data yang besar. Cookies hanya bisa menyimpan data 4 KB per cookie.
+- Cookies akan selalu dikirim setiap request ke server, ketika jumlah dan ukuran cookies banyak, bisa menimbulkan beban dan lag pada jaringan.
+- Dikarenakan cookies tersimpan di browser, user bisa mengedit cookies lewat DevTools dan dapat menimbulkan resiko terjadinya data dipalsukan.
+
+b. Session
+Kelebihan:
+- Ketika session dibuat, data session akan disimpan di server. User hanya menyimpan session ID di cookies. Data asli ada di server, jadi lebih sulit bagi user untuk mengubahnya dan menjadi lebih aman dari resiko manipulasi data.
+- Session bisa menyimpan data lebih besar karena penyimpanan dilakukan di server (misalnya di database, file, atau cache), tidak terbatas 4 KB.
+Kekurangan:
+- Jika ada banyak user yang membuat session, server harus menyimpan session tiap user. Ini bisa membebani penyimpanan dan efektifitas kerja pada server.
+- Session bbergantung pada mekanisme session expiration,jadi ketika session tidak dikelola dengan penghapusan atau cleaning data, data session bisa menumpuk dan membuat server penuh.
+
+### 4. Apakah penggunaan cookies aman secara default dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai? Bagaimana Django menangani hal tersebut?
+
+Seperti yang sudah dijelaskan di nomor 3, salah satu kekurangan cookies yaitu disimpan pada browser sehingga data yang kredensial atau sensitif dapat mudah dimodifikasi. Ada beberapa resiko yang potensial disebabkan oleh cookies, yaitu seperti manipulasi ketika user bisa mengubah isi cookies yang terlihat dengan menggunakan DevTools, lalu juga ada kemungkinan session ID dicuri dan ada orang yg menyamar jadi user aslinya, atau juga serangan seperti CSRF karena cookies dikirim otomatis ke server sehingga bisa saja disalahgunakan oleh penyamar.
+
+Untuk mengatasi permasalahan tersebut, Django memiliki beberapa cara yaitu pertama Django sendiri akan mengenkripsi cookies tertentu sehingga tidak bisa diubah sembarangan seperti conthnya signed cookies yaitu Django menggunakan hashing untuk memastikan data cookie tidak dimodifikasi di client-side. Kedua, Django menyediakan [SESSION_COOKIE_HTTPONLY = True] yang berfungsi supaya cookies tidak dapat diakses melalui JavaScript untuk mengurangi resiko pencurian session ID dan juga [SESSION_COOKIE_SECURE = True] yang akan memastikan cookies hanya dikirim lewat HTTPS. Ketiga, Django akan menambahkan token CSRF untuk mencegah request yang tidak sesuai dengan pengguna atau peramban sah nya. 
+
+### 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+
+Berikut langkah-langkah yang saya lakukan untuk mengimplementasikan checlist tugas 4,
+1. Pertama untuk melakukan autentikasi dibuat fungsi registrasi pada views.py dengan membuat form atau layout tampilan register pada halaman websitenya, lalu atur tampilan di file register.html, dan atur urls supaya fungsi register dapat tersampaikan ke user atau client-side
+2. Kedua, membuat fungsi login dan logout, sama seperti langkah pertama yaitu membuat fungsi di views.py, lalu mengatur tampilan login di login.html dan logout di main.html karena logout hanya sekedar keluar dari halaman utama bukan suatu form yg baru. Bagian login dan logout disini ditambahkan otorisasi Django supaya web hanya dapat diakses oleh user sebenarnya.
+3. Ketiga, mengimplementasikan cookies dan session pada proses autentikasi ini. Cookies ini digunakan untuk preferensi bagi user, sehingga kita dapat melihat kapan terakhir kali login menggunakan akun tersebut. Jadi pada views.py di fungsi login, disimpan cookies untuk menyimpan informasi login yang baru dilakukan dan disetting pada fungsi show_main di context agar terlihat di web bagian last_login termasuk mengatur tampilan di file main.html nya jg. Lalu, untuk menghapus data informasi login yg telah dilakukan saat logout, ditambahkan bagian delete_cookie pada fungsi logout.
+4. Terakhir menghubungkan product dengan user agar tiap produk yg ditambahkan oeh suatu akun tertentu dapat tertulis pada product_details. Disini, saya mengatur models.py agar model produk dapat diakses oleh user sedang login, lalu dimigrasi, dan mengatur fungsi create_product di views.py agar tambahan produk user itu merupakan user yang memang sedang login, diatur juga pada templates htmlnya agar terlihat akun yg menambah produk tersebut. Mengatur juga bagian halaman utama agar namanya sesuai dengan akun yg sedang login. Lalu juga memisahkan bagian semua produk dengan bagian yang hanya produk akun kita sendiri dengan filter "My" dan "All" dan diatur juga pada templates html.
