@@ -1,9 +1,12 @@
 import uuid
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
 class Produk(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    
     CATEGORY = [
         ('sepatu bola', 'Sepatu Bola'),
         ('kaos kaki', 'Kaos Kaki'),
@@ -38,4 +41,6 @@ class Produk(models.Model):
         self.stock += quantity
         self.save()
     
+
+
     
