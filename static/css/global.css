@@ -1,0 +1,183 @@
+.form-style form input, form textarea, form select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid #bcbcbc;
+    border-radius: 0.375rem;
+}
+.form-style form input:focus, form textarea:focus, form select:focus {
+    outline: none;
+    border-color: #fbde00;
+    box-shadow: 0 0 0 3px #fbde00;
+}
+
+.form-style input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0;
+    border: 2px solid #d1d5db;
+    border-radius: 0.375rem;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.form-style input[type="checkbox"]:checked {
+    background-color: #fbde00;
+    border-color: #fbde00;
+}
+
+.form-style input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.form-style input[type="checkbox"]:focus {
+    outline: none;
+    border-color: #fbde00;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #e5e7eb; 
+  border-radius: 0.75rem; 
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.product-card .thumbnail {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.product-card .thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card .thumbnail .no-image {
+  width: 100%;
+  height: 100%;
+  background-color: #e5e7eb;
+}
+
+.product-card .badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  margin-right: 0.25rem;
+}
+
+
+.product-card .badge.category {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: #fbde00;
+}
+
+.product-card .badges {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.product-card .badge.featured {
+  background-color: #15d4fa;
+  color: #093aac;
+}
+
+.product-card .badge.hot {
+  background-color: #ef4444;
+  color: #7d1616;
+}
+
+.product-card .content {
+  padding: 1.25rem;
+}
+
+.product-card .meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.product-card .title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.product-card .description {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-card .actions {
+  padding-top: 1rem;
+  border-top: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card .right-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.product-card .actions .btn-detail {
+  color: #fbde00;
+}
+
+.product-card .actions .btn-detail:hover {
+  color: #fbc000;
+}
+
+.product-card .actions .btn-edit {
+  color: #8292a9;
+}
+
+.product-card .actions .btn-edit:hover {
+  color: #111827;
+}
+
+.product-card .actions .btn-delete {
+  color: #dc2626;
+}
+
+.product-card .actions .btn-delete:hover {
+  color: #951a1a;
+}
